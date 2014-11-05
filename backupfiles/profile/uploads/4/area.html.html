@@ -1,0 +1,75 @@
+<html>
+
+<head>
+
+
+		<script type="text/javascript">
+			
+			function clearText(element3)
+			{
+				if(element3.value == "First value..." || element3.value == "Second value...")
+				{
+					element3.value = "";
+				}
+				else if(element3.value == " " || element3.value == "") 
+				{
+					element3.value = element3.defaultValue;					
+				}
+			}
+
+			function calculate(valueOne, valueTwo, measurementFormat)
+			{
+
+				if(isNaN(valueOne) || isNaN(valueOne))
+				{
+					alert('Please enter numerical values!');
+				}
+				else
+				{
+					var newValue = valueOne * valueTwo;
+					var string = newValue;
+					var strung = 'The area is: ' + newValue + " " + measurementFormat;
+					alert(strung);
+				}
+				
+			}
+				
+		</script>
+
+
+	</head>
+
+	<body style="text-align: center; background: #0c0c0c; padding: 0; margin: 0;" >
+		<div id="content" style="position: fixed; left: 0px; z-index: 1; text-align: center; opacity: 0; padding: 20px; background: #fff; border: solid 1px #0c0c0c; border-left: solid 1px #fff; border-top: solid 1px #fff; width: 100%; height: 100%; margin-left: 0px; margin-right: auto;">
+
+			<img src="logo.gif" />
+			
+			<form id="formName" name="clearForm">
+				
+				<input type="hidden" name="hiddenInput" />
+				<div style="text-align: left; width: 250px;">
+					<label>Length:</label></br>
+					<input style="text-align: left; width: 250px;" type="text" onFocus="clearText(this);" onBlur="clearText(this);" value="First value..." id="firstValue" name="firstValue" /></br></br>
+				</div>
+				<div style="text-align: left; width: 250px;">
+					<label>Breadth:</label></br>
+					<input type="text" style="text-align: left; width: 250px;" onFocus="clearText(this);" onBlur="clearText(this);" value="Second value..." id="secondValue" name="secondValue" /></br></br>
+				</div>
+				<div style="text-align: left; width: 250px;">
+					<select id="format" >
+						<option value="m2">Metres</option>
+						<option value="/"2">Inches</option>
+						<option value="cm2">Centimetres</option>
+					</select></br></br>
+				
+					<button type="button" onClick="calculate(document.getElementById('firstValue').value, document.getElementById('secondValue').value, document.getElementById('format').value);" >Submit Calculation...</button>	
+				</div>
+			</form>
+
+
+		</div>
+
+
+	</body>
+	
+</html>

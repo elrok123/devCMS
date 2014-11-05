@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>VPS - GlassHost by Squidix</title>
+	<link href="_assets/_css/main.css" rel="stylesheet" type="text/css" />
+	<script src="_assets/_js/jquery.js" type="text/javascript"></script>
+	<script src="_assets/_js/jquery_ui.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="top">
+    <div class="wrapper shapes"></div>
+  </div>
+
+  <div id="nav">
+    <div class="wrapper">
+      <a href="index.html">
+      	      <div id="logo" style="background-image:url(_assets/_img/logo.png);background-size: contain;">
+      	</div>
+      </a>
+
+      <div class="smallButton">
+        Client Area
+      </div>
+    <ul class="navigation"><li><a href="index.html">Home</a></li><li><a href="hosting.html">Hosting</a></li><li class="selected"><a href="vps.html">VPS</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li></ul>    </div>
+  </div>
+
+  <div id="main">
+    <div class="shapes">
+      <div class="wrapper">	   <div id="vpsHeader">
+          <div class="left">
+            <div class="title">
+              <h1>Managed VPS</h1>
+
+              <h2>Use the slider to choose a plan, then hit order!</h2>
+            </div>
+
+            <div class="price">
+              Total<br />
+              <span class="blue" id="price">$59.99</span>
+            </div>
+          </div>
+
+          <div class="right">
+            <a href="javascript:;"></a>
+
+            <div class="fatButton">
+              Order now
+            </div>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="vpsContent">
+          <div id="slider">
+            <div id="sliderContainer"></div>
+          </div>
+
+          <table cellpadding="30" cellspacing="0" border="0" align="center">
+            <tr>
+              <td>
+                <div class="detail" id="memoryDetail">
+                  2GB
+                </div>Guaranteed memory
+              </td>
+
+              <td>
+                <div class="detail" id="cpuDetail">
+                  2.67GHz
+                </div>Guaranteed CPU
+              </td>
+
+              <td>
+                <div class="detail" id="protectedDetail">
+                  100GB
+                </div>Protected diskspace
+              </td>
+
+              <td>
+                <div class="detail" id="monthlyDetail">
+                  500GB
+                </div>Monthly bandwidth
+              </td>
+
+              <td><img src="_assets/_img/59price.png" id="priceCircle" name="priceCircle" alt="" /></td>
+            </tr>
+          </table>
+
+          <div class="shadow"></div>
+        </div>
+
+        <div id="serverInfo">
+          <div class="col">
+            <div class="plans">
+              <h1>All of our plans include...</h1>It's time for a treat. With every VPS
+              package, we're throwing in everything listed below.
+
+              <ul>
+                <li><span class="orange">1GBPS</span> Node Uplink</li>
+
+                <li><span class="orange">FREE</span> IP Address</li>
+
+                <li><span class="orange">FREE</span> Server Management</li>
+
+                <li><span class="orange">FREE</span> SSL Certificate</li>
+
+                <li><span class="orange">FREE</span> CloudFlare CDN</li>
+
+                <li><span class="orange">FREE</span> Server Setup</li>
+
+                <li><span class="orange">FREE</span> OS patching and reinstalls</li>
+
+                <li><span class="orange">FREE</span> Control panel installation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="network">
+              <h1>Our network infrastructure</h1>We choose carefully and only use the
+              finest of networks and data centres in the UK and USA.<br />
+              <br />
+              <span class="small">If they won't deliver a consistently unrivaled service,
+              we won't put your data in their building.</span>
+
+              <ul>
+                <li>24 Intel 2.7Ghz cores</li>
+
+                <li>We promise no more than 10 accs per core</li>
+
+                <li>Servers purchased directly from Dell</li>
+
+                <li>100% Cisco powered networks</li>
+
+                <li>Intelligent traffic routing &amp; inspection</li>
+
+                <li>SAS &amp; SSD disks, lightning fast storage</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="about">
+              <h1>About our servers</h1>They're purchased straight from Dell and all
+              consist of enterprise-grade hardware.<br />
+              <br />
+              EXAMPLE SERVER SETUP:
+
+              <ul>
+                <li>Dell PowerEdge R510</li>
+
+                <li>32GB DDR3 memory</li>
+
+                <li>8x600GB SAS 15k RPM disks in RAID 10</li>
+
+                <li>4x256GB Intel SSD drives in RAID 1</li>
+
+                <li>24 Intel CPU cores @ 2.66Ghz</li>
+
+                <li>cPanel, CloudLinux, LiteSpeed, R1Soft &amp; CloudFlare</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="homeDomains">
+          <h1>We offer a free domain with all VPS packages, so see what's available!</h1>
+
+          <form id="domainSearch" method="post" name="domainSearch" action="">
+            <span class="www">www.</span> <input type="text" name="domainField" id=
+            "domainField" /> <select name=
+            "domainExt" id="domainExt">
+              <option>
+                .co.uk
+              </option>
+
+              <option>
+                .eu
+              </option>
+
+              <option>
+                .me
+              </option>
+
+              <option>
+                .com
+              </option>
+            </select><input type="submit" name="searchDomains" id="searchDomains" value=
+            "Search domains" />
+          </form>
+          <div class="clear"></div>
+        </div>
+
+        <div class="screens">
+          <div class="col first">
+            <img src="_assets/_img/onapp_screen_1.png" alt="" /> <span class="green">Powered by
+            OnApp</span>
+
+            <p>The OnApp Control Panel is fully customizable. It provides intuitive
+            control over every aspect of your cloud.</p>
+          </div>
+
+          <div class="col">
+            <img src="_assets/_img/onapp_screen_2.png" alt="" /> <span class="green">Virtual
+            machine management</span>
+
+            <p>You can create, start, stop or delete virtual machines directly from the
+            control panel. The actions available to users depend on [...]</p>
+          </div>
+
+          <div class="col last">
+            <img src="_assets/_img/onapp_screen_3.png" alt="" /> <span class="green">Change
+            virtual machine resources</span>
+
+            <p>It's easy to scale up resources for virtual machines, or to scale back
+            when needed.</p>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div><script type="text/javascript">
+//<![CDATA[
+                                        $(function() {
+                                                $( "#sliderContainer" ).slider({
+                                                        range: "min",
+                                                        value:200,
+                                                        min: 100,
+                                                        max: 500,
+                                                        step: 100,
+                                                        slide: function( event, ui ) {
+                                                                switch(ui.value)
+                                                                {
+                                                                        case 100:
+                                                                                $('#memoryDetail').html('1GB');
+                                                                                $('#cpuDetail').html('1.5GHz');
+                                                                                $('#protectedDetail').html('50GB');
+                                                                                $('#monthlyDetail').html('250MB');
+                                                                                $('#price').html('$39.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/39price.png');
+                                                                        break;
+                                                                        case 200:
+                                                                                $('#memoryDetail').html('2GB');
+                                                                                $('#cpuDetail').html('2.67GHz');
+                                                                                $('#protectedDetail').html('100GB');
+                                                                                $('#monthlyDetail').html('500MB');
+                                                                                $('#price').html('$59.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/59price.png');
+                                                                        break;
+                                                                        case 300:
+                                                                                $('#memoryDetail').html('3GB');
+                                                                                $('#cpuDetail').html('3.5GHz');
+                                                                                $('#protectedDetail').html('200GB');
+                                                                                $('#monthlyDetail').html('750MB');
+                                                                                $('#price').html('$79.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/79price.png');
+                                                                        break;
+                                                                        case 400:
+                                                                                $('#memoryDetail').html('4GB');
+                                                                                $('#cpuDetail').html('4.0GHz');
+                                                                                $('#protectedDetail').html('400GB');
+                                                                                $('#monthlyDetail').html('1GB');
+                                                                                $('#price').html('$99.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/99price.png');
+                                                                        break;
+                                                                        case 500:
+                                                                                $('#memoryDetail').html('5GB');
+                                                                                $('#cpuDetail').html('4.0GHz');
+                                                                                $('#protectedDetail').html('800GB');
+                                                                                $('#monthlyDetail').html('2GB');
+                                                                                $('#price').html('$119.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/119price.png');
+                                                                        break;
+                                                                }
+                                                        }
+                                                });
+                                        });
+        //]]>
+        </script>
+
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="wrapper">
+				<div class="left">
+					<ul>
+		        <li style="list-style: none">Site</li>
+		        <li><a href="javascript:;">Home</a></li>
+		        <li><a href="javascript:;">About Us</a></li>
+		        <li><a href="javascript:;">We're Hiring</a></li>
+		        <li><a href="javascript:;">Privacy Policy</a></li>
+		        <li><a href="javascript:;">Terms of Use</a></li>
+		      </ul>
+		      <ul>
+		        <li style="list-style: none">Services</li>
+		        <li><a href="javascript:;">Web Hosting</a></li>
+		        <li><a href="javascript:;">Managed VPS</a></li>
+		        <li><a href="javascript:;">Domain Names</a></li>
+		        <li><a href="javascript:;">Web Development</a></li>
+		        <li><a href="javascript:;">App Development</a></li>
+		      </ul>
+		      <ul>
+		        <li style="list-style: none">Support</li>
+		        <li><a href="javascript:;">Customer panel</a></li>
+		        <li><a href="javascript:;">Knowledgebase</a></li>
+		        <li><a href="javascript:;">Network status</a></li>
+		        <li><a href="javascript:;">Infrastructure</a></li>
+		        <li><a href="javascript:;">Live Support</a></li>
+		      </ul>
+				</div>
+				<div class="right">
+					You can find us on...<br />
+					<a href="http://facebook.com/"><img src="_assets/_img/facebook.png" border="0" /></a>
+					<a href="http://tumblr.com/"><img src="_assets/_img/tumblr.png" border="0" /></a>
+					<a href="http://twitters.com/"><img src="_assets/_img/twitter.png" border="0" /></a>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<div class="wrapper">
+				Copyright &copy; 2012. Designed by <a href="http://squidix.com">Squidix</a>.
+			</div>
+		</div>
+	</body>
+</html>

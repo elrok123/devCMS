@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>GlassHost Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;GlassHost&rdquo; Documentation by &ldquo;Scripteers&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;GlassHost&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 5/3/2012<br>
+					By: Scripteers<br>
+					Email: <a href="mailto:main@scripteers.com">main@scripteers.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/scripteers">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+
+		<ul>
+			<li>The .wrapper class sets the width of the content within it to 970 and vertically aligns it so you get the effect that the page is centered. creating a div that is 100% of the page and then putting wrapper INSIDE it is the preferred practice for new page elements.</li>
+			<li>The .shapes class applies a semi-transparent background which gives the background behind it an effect. For example see the home page above the plan boxes.</li>
+			<li>The #table ID creates a CSS table. The .row class creates a row (add .summary for the summary row). The .col class creates a cell (add .heading to add a gradient background if you want the cell to serve as a label for the rest of its row. For an example of this see the plans page.</li>
+			<li>Use .col by itself to create boxes (these will take us 1/3 of the page's width). Apply .first to the first and .last to the last as well. This is shown on the home, plans, and vps pages.</li>
+			<li>To create a box similar to the styling of the 3 plan boxes on the home page, create a .box div. Inside of it, put a .servers div (leave empty) and a .content div. Inside of the .content div you may add header tags, p tags, and ul tags which will be styled appropriately.</li>
+		</ul>
+		
+		<p>The code for the domain checker box is as follows:</p>
+		<p><textarea>
+  &lt;div id=&quot;homeDomains&quot;&gt;
+    &lt;h1&gt;We offer a free domain with all VPS packages, so see what's available!&lt;/h1&gt;
+    &lt;form id=&quot;domainSearch&quot; method=&quot;post&quot; name=&quot;domainSearch&quot; action=&quot;&quot;&gt;
+      &lt;span class=&quot;www&quot;&gt;www.&lt;/span&gt; &lt;input type=&quot;text&quot; name=&quot;domainField&quot; id=
+      &quot;domainField&quot; /&gt; &lt;select name=&quot;domainExt&quot; id=&quot;domainExt&quot;&gt;
+        &lt;option&gt;
+          .co.uk
+        &lt;/option&gt;
+        &lt;option&gt;
+          .eu
+        &lt;/option&gt;
+        &lt;option&gt;
+          .me
+        &lt;/option&gt;
+        &lt;option&gt;
+          .com
+        &lt;/option&gt;
+      &lt;/select&gt;&lt;input type=&quot;submit&quot; name=&quot;searchDomains&quot; id=&quot;searchDomains&quot; value=
+      &quot;Search domains&quot; /&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+		</textarea>
+		</p>
+
+		<p>Here is some example JS code for the VPS slider:</p>
+		<p>
+			<textarea>
+//<![CDATA[
+                                        $(function() {
+                                                $( "#sliderContainer" ).slider({
+                                                        range: "min",
+                                                        value:200,
+                                                        min: 100,
+                                                        max: 500,
+                                                        step: 100,
+                                                        slide: function( event, ui ) {
+                                                                switch(ui.value)
+                                                                {
+                                                                        case 100:
+                                                                                $('#memoryDetail').html('1GB');
+                                                                                $('#cpuDetail').html('1.5GHz');
+                                                                                $('#protectedDetail').html('50GB');
+                                                                                $('#monthlyDetail').html('250MB');
+                                                                                $('#price').html('$39.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/39price.png');
+                                                                        break;
+                                                                        case 200:
+                                                                                $('#memoryDetail').html('2GB');
+                                                                                $('#cpuDetail').html('2.67GHz');
+                                                                                $('#protectedDetail').html('100GB');
+                                                                                $('#monthlyDetail').html('500MB');
+                                                                                $('#price').html('$59.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/59price.png');
+                                                                        break;
+                                                                        case 300:
+                                                                                $('#memoryDetail').html('3GB');
+                                                                                $('#cpuDetail').html('3.5GHz');
+                                                                                $('#protectedDetail').html('200GB');
+                                                                                $('#monthlyDetail').html('750MB');
+                                                                                $('#price').html('$79.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/79price.png');
+                                                                        break;
+                                                                        case 400:
+                                                                                $('#memoryDetail').html('4GB');
+                                                                                $('#cpuDetail').html('4.0GHz');
+                                                                                $('#protectedDetail').html('400GB');
+                                                                                $('#monthlyDetail').html('1GB');
+                                                                                $('#price').html('$99.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/99price.png');
+                                                                        break;
+                                                                        case 500:
+                                                                                $('#memoryDetail').html('5GB');
+                                                                                $('#cpuDetail').html('4.0GHz');
+                                                                                $('#protectedDetail').html('800GB');
+                                                                                $('#monthlyDetail').html('2GB');
+                                                                                $('#price').html('$119.99');
+                                                                                $('#priceCircle').attr('src','_assets/_img/119price.png');
+                                                                        break;
+                                                                }
+                                                        }
+                                                });
+                                        });
+        //]]>
+			</textarea>
+		</p>
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>The theme has 4 CSS files.</p>
+
+		<ul>
+			<li>main.css - Simply includes the others.</li>
+			<li>normalize.css - Fixes cross browser discrepancies.</li>
+			<li>default.css - Most of the actual stylings.</li>
+			<li>fonts.css - Application of the web font.</li>
+		</ul>
+
+		<p>Below are some useful classes for common elements.</p>
+
+		<p>Text Colour Classes</p>
+		<ul>
+		<li>.blue - &lt;span class="blue&gt;text&lt;/span&gt; This will make the text blue</li>
+		<li>.orange - &lt;span class="orange&gt;text&lt;/span&gt; This will make the text orange</li>
+		<li>.green - &lt;span class="green&gt;text&lt;/span&gt; This will make the text green</li>
+		</ul>
+
+		<p>Button Classes</p>
+		<ul>
+		<li>.smallButton - &lt;div class="smallButton>Button text&lt;/div&gt; Creates a small green button</li>
+		<li>.smallButton.orange - &lt;div class="smallButton orange"&gt;Button text&lt;/div&gt; Creates a small orange button</li>
+		<li>.smallButton.blue - &lt;div class="smallButton blue"&gt;Button&lt;/div&gt; Creates a small blue button</li>
+		<li>.fatButton - &lt;div class="fatButton"&gt;Button&lt;/div&gt; Creates a large fat button</li>
+		</ul>
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme uses jQuery and jQuery UI for the VPS slider. No other JavaScript is used.</p>
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>D) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>We've included 6 PSD files with this theme:</p>
+		
+		<ol>
+			<li>Home Page</li>
+			<li>Hosting Page</li>
+			<li>VPS Page</li>
+			<li>Text Page</li>
+			<li>Blog Page</li>
+			<li>Post Page</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="javascript"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>We've used a couple of third party assets in GlassHost.</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>jQuery UI</li>
+			<li><a href="http://www.fontsquirrel.com/fonts/Sansation">Sansation Font</a> by Bernd Montag</li>
+		</ol>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+		
+		<p class="append-bottom alt large"><strong>Scripteers</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

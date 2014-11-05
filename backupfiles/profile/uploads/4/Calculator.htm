@@ -1,0 +1,159 @@
+ 
+<html>
+ 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-gb">
+<link rel="stylesheet" type="text/css" href="http://hb.intranet/css/default.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title> Conversion Calculator</title>
+<script LANGUAGE="JavaScript"> 
+<!--
+function checkNum() {
+		var str = document.convert.txtInput.value;
+        for (var i=0; i<str.length; i++) {
+        var ch = str.substring(i, i + 1)
+        if (ch!="." && ch!="+" && ch!="-" && ch!="e" && ch!="E" && (ch < "0" || ch > "9")) {
+				document.convert.txtInput.value = "";
+                window.alert("Please enter a valid number");
+               return false
+                }
+        }
+        return true
+}
+ 
+function normalize(what,digits) {
+        var str=""+what;
+        var pp=Math.max(str.lastIndexOf("+"),str.lastIndexOf("-"));
+        var idot=str.indexOf(".");
+        if (idot>=1) {
+                var ee=(pp>0)?str.substring(pp-1,str.length):"";
+                digits+=idot;
+                if (digits>=str.length)
+                        return str;
+                if (pp>0 && digits>=pp)
+                        digits-=pp;
+                var c=eval(str.charAt(digits));
+                var ipos=digits-1;
+                if (c>=5) {
+                        while (str.charAt(ipos)=="9") ipos--;
+                        if (str.charAt(ipos)==".") {
+                                var nc=eval(str.substring(0,idot))+1;
+                                if (nc==10 && ee.length>0) {
+                                        nc=1;
+                                        ee="e"+(eval(ee.substring(1,ee.length))+1);
+                                }
+                                return ""+nc+ee;
+                        }
+                        return str.substring(0,ipos)+(eval(str.charAt(ipos))+1)+ee;
+                } else
+                        var ret=str.substring(0,digits)+ee;
+                        for (var i=0; i<ret.length; i++)
+                                if (ret.charAt(i)>"0" && ret.charAt(i)<="9")
+                                        return ret;
+                        return str;
+         }
+         return str;
+}
+ 
+function checkDefault1() {
+				var list1 = document.convert.mnFrom
+				integer1 = list1.options[list1.selectedIndex].value
+				
+				if ((integer1  == "x")){
+				alert("Please select the units you wish to calculate.");
+											}
+						}
+				
+function checkDefault2() {
+				var list2 = document.convert.mnFrom
+				integer2 = list2.options[list2.selectedIndex].value
+				
+				if ((integer2  == "x")){
+				alert("Please select the units you wish to calculate.");
+											}
+						}
+ 
+function convertNum() {
+				var list1 = document.convert.mnFrom
+				integer1 = list1.options[list1.selectedIndex].value
+ 
+				var list2 = document.convert.mnTo
+				integer2 = list2.options[list2.selectedIndex].value
+				
+				if ((integer1  == "x") || (integer2  == "x")){
+				document.convert.txtOutput.value = "";
+					}
+					
+				else if ((integer1  == "x") || (integer2  == "x")){
+				document.convert.txtOutput.value = "";
+					}
+					
+				else if (document.convert.txtInput.value == ""){
+				document.convert.txtOutput.value = "";
+					}
+				else {
+				var userData = eval(document.convert.txtInput.value);
+                var uval=0;
+                uval = userData*integer1;
+                document.convert.txtOutput.value = normalize(uval/integer2,3);}
+        }
+ 
+// -->
+</script>
+</head>
+ 
+<body>
+ 
+<h1 align="center"> Conversion Calculator</h1>
+<p align="center"><a href="conversion_calculator.asp?ConversionType=Area">Area</a> 
+| <a href="conversion_calculator.asp?ConversionType=Length">Length</a> |
+<a href="conversion_calculator.asp?ConversionType=Volume">Volume</a> |
+<a href="conversion_calculator.asp?ConversionType=Weight">Weight</a> |
+<a href="tile_calculator.asp">Tiles</a></p>
+<form name="convert">
+  <div align="center">
+    <center>
+    <table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber1">
+      <tr>
+        <td align="right">Convert :</td>
+        <td><input type="text" name="txtInput" size="20"></td>
+      </tr>
+      <tr>
+        <td align="right">From :</td>
+        <td>
+        <select NAME="mnFrom" ONCHANGE="checkDefault1(); if (checkNum())convertNum()">
+        <option VALUE="x">Choose unit</option>
+        <option VALUE="x">-----------------</option>
+        
+        <option VALUE="error">&nbsp;</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td align="right">To :</td>
+        <td>
+        <select NAME="mnTo" ONCHANGE="checkDefault2(); if (checkNum())convertNum()">
+        <option VALUE="x">Choose unit</option>
+        <option VALUE="x">-----------------</option>
+        
+        <option VALUE="error">&nbsp;</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td align="right">
+        <h2>Result :</h2>
+        </td>
+        <td><input type="text" name="txtOutput" size="20"></td>
+      </tr>
+    </table>
+    </center>
+  </div>
+</form>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+ 
+</body>
+ 
+</html>
+

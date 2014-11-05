@@ -1,0 +1,12 @@
+# Read documentation http://www.boxbilling.com/docs/ for more information
+# Rename this file to .htaccess in order to work
+# If you are receiving "Internal Server Error" message - make sure mod_rewrite is enabled in apache
+
+Options -Indexes
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule ^([^/\.]+)/?$ index.php?pageName=$1

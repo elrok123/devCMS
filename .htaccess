@@ -1,0 +1,23 @@
+# Read documentation http://www.boxbilling.com/docs/ for more information
+# Rename this file to .htaccess in order to work
+# If you are receiving "Internal Server Error" message - make sure mod_rewrite is enabled in apache
+
+Options -Indexes
+Options +FollowSymLinks
+
+<Files robots.txt>
+	Order Deny,Allow
+	Deny from All
+	Allow from googlebot.com google.com google-analytics.com
+</Files>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule ^([^/\.]+)/([a-zA-Z0-9-.]+)$ index.php?pageName=$1&blogpage=$2 [QSA,L]
+
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule ^([^/\.]+)/?$        index.php?pageName=$1 [QSA]
+

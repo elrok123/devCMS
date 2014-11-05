@@ -1,0 +1,179 @@
+<html>
+
+<head>
+		<title>Convert Units of Measurement</title>
+
+		<script type="text/javascript">
+			screen.width="250";
+			screen.height="600";
+			var dater = new Date();
+			function clearText(element3)
+			{
+				if(element3.value == "Original value...")
+				{
+					element3.value = "";
+				}
+				else if(element3.value == " " || element3.value == "") 
+				{
+					element3.value = element3.defaultValue;					
+				}
+			}
+
+			function calculate(valueOne, measurementFormat1, measurementFormat2)
+			{
+				var resultElem = document.getElementById('resultValue');
+
+				if(isNaN(valueOne))
+				{
+					alert('Please enter a numerical value!');
+					document.getElementById('firstValue').focus();
+				}
+
+				//metres to other measurement.				
+
+				else if(measurementFormat1 == 1 && measurementFormat2 == 3)
+				{
+					var newValue = valueOne * 100;
+					var strung = newValue + " cm";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 1 && measurementFormat2 == 2)
+				{
+					var newValue = (valueOne * 3.94) * 10;
+					var strung = newValue + " inches";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 3 && measurementFormat2 == 4)
+				{
+					var newValue = (valueOne * 3.94) * 10;
+					newValue = newValue / 12;
+					var strung = newValue + " feet";
+					resultElem.value = strung;
+				}
+				
+				//Inches to other measurement.
+				
+				else if(measurementFormat1 == 2 && measurementFormat2 == 1)
+				{
+					var newValue = (valueOne / 3.94) / 10;
+					var strung = newValue + " m";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 2 && measurementFormat2 == 3)
+				{
+					var newValue = valueOne * 2.5;
+					var strung = newValue + " cm";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 2 && measurementFormat2 == 4)
+				{
+					var newValue = valueOne / 12;
+					var strung = newValue + " feet";
+					resultElem.value = strung;
+				}
+
+				//Centimetres to other measurement.
+
+				else if(measurementFormat1 == 3 && measurementFormat2 == 1)
+				{
+					var newValue = valueOne / 100;
+					var strung = newValue + " m";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 3 && measurementFormat2 == 2)
+				{
+					var newValue = valueOne / 2.53;
+					var strung = newValue + " inches";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 3 && measurementFormat2 == 4)
+				{
+					var newValue = valueOne / 2.53;
+					var strung = newValue + " feet";
+					resultElem.value = strung;
+				}
+
+				//If measurements are the same.
+
+				else if(measurementFormat1 == measurementFormat2)
+				{
+					alert("Please select a different unit of measurement!");
+					document.getElementById('format2').focus();
+				}
+				//Feet to other measurement.
+				
+				else if(measurementFormat1 == 4 && measurementFormat2 == 1)
+				{
+					var newValue = ((valueOne / 3.94) / 10) / 12;
+					var strung = newValue + " m";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 4 && measurementFormat2 == 2)
+				{
+					var newValue = valueOne * 12;
+					var strung = newValue + " cm";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 4 && measurementFormat2 == 3)
+				{
+					var newValue = (valueOne * 2.5) / 12;
+					var strung = newValue + " cm";
+					resultElem.value = strung;
+				}
+				else if(measurementFormat1 == 4 && measurementFormat2 == 4)
+				{
+					alert("Please choose a different measurement to convert to.")
+				}
+				
+			}
+				
+		</script>
+
+
+	</head>
+
+	<body onLoad="document.getElementById('time').innerHTML=dater;" style="text-align: center; background: #0c0c0c; padding: 0; margin: 0;" >
+		<div id="content" style="position: fixed; left: 0px; z-index: 1; text-align: center; opacity: 0; padding: 20px; background: #fff; border: solid 1px #0c0c0c; border-left: solid 1px #fff; border-top: solid 1px #fff; width: 100%; height: 100%; margin-left: 0px; margin-right: auto;">
+
+			<img src="logo.gif" />
+			<div id="time"></div>
+			<form id="formName" name="clearForm">
+				
+				<input type="hidden" name="hiddenInput" />
+				<div style="text-align: left; width: 250px;">
+					<label>Convert Units of Measurement</label></br>
+					<strong><input style="font-size: 14px; text-weight: strong; padding: 10px; height: 36px; border: 1px solid green; text-align: left; width: 250px;" type="text" onFocus="clearText(this);" onBlur="clearText(this);" value="Original value..." id="firstValue" name="firstValue" /></strong></br></br>
+					<strong><label>Original:</label></strong>
+					<select id="format1" style="border: 1px solid green;  height: auto; width: 80px;" >
+						<option value="1">Metres</option>
+						<option value="2">Inches</option>
+						<option value="3">Centimetres</option>
+						<option value="4">Feet</option>
+					</select></br></br>
+				</div>
+				<div style="text-align: left; width: 250px;">
+					<strong><label>Convert to:</label></strong>
+					<select id="format2" style="border: 1px solid green;">
+						<option value="1" style="border: 1px solid green;">Metres</option>
+						<option value="2" style="border: 1px solid green;">Inches</option>
+						<option value="3" style="border: 1px solid green;">Centimetres</option>
+						<option value="4" style="border: 1px solid green;">Feet</option>
+					</select></br></br>
+					<strong><label>New Value:</label></strong>
+					<strong><input style="font-size: 14px; text-decoration: bold; height: 36px; color: 0c0c0c; border: 1px solid green; text-align: left; width: 250px; padding: 10px;" type="text" disabled="true" onFocus="clearText(this);" onBlur="clearText(this);" id="resultValue" name="firstValue" /></strong></br></br>
+					<button type="button" onClick="calculate(document.getElementById('firstValue').value, document.getElementById('format1').value, document.getElementById('format2').value);" style="border: 1px solid green;">Submit Calculation...</button>	
+					<!----!<button type="button" onClick="change()" >Herp</button>----->	
+				
+				
+				</div>
+
+					
+			</form>
+
+
+		</div>
+
+
+	</body>
+	
+</html>

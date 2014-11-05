@@ -1,0 +1,5 @@
+[13-Feb-2012 10:05:58] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting '(' in /home/globalvo/public_html/administrator/panel/styling/index.php on line 64
+[13-Feb-2012 10:06:00] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting '(' in /home/globalvo/public_html/administrator/panel/styling/index.php on line 64
+[13-Feb-2012 10:06:14] PHP Parse error:  syntax error, unexpected ',' in /home/globalvo/public_html/administrator/panel/styling/index.php(64) : eval()'d code on line 3
+[13-Feb-2012 10:10:01] PHP Parse error:  syntax error, unexpected ';' in /home/globalvo/public_html/administrator/panel/styling/index.php on line 66
+[13-Apr-2012 21:53:01] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/globalvo/public_html/administrator/panel/styling/index.php on line 136

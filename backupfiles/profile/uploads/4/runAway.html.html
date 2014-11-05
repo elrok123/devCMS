@@ -1,0 +1,142 @@
+<html>
+
+<head>
+		<title>Run Away Game!</title>
+		<style type="text/css">
+			body, html{
+				font-family: "Verdana" Serif;
+				overflow: hidden;
+				
+			}
+		</style>
+
+		<script type="text/javascript">
+
+
+			var herp = 2;
+			var derp = 0;
+			
+			
+			function runAway(element)
+			{
+				
+				if(derp == 0)
+				{
+					element.style.marginLeft = Math.floor(Math.random()*500) + "px";
+					derp++;
+					/*element.innerHTML=':D';*/
+				}
+				else if(derp == 1)
+				{
+					element.style.marginLeft = Math.floor(Math.random()*500) + "px";
+					derp--;
+					/*element.innerHTML='D:';*/
+				}
+				element.style.marginTop = Math.floor(Math.random()*490) + "px";	
+				if(herp <= 200)
+				{
+					herp++;
+					
+				}
+				else if(herp >= 201)
+				{
+					herp--;
+					herp = herp / 100;
+					/*element.innerHTML=':S';*/
+				}
+				herp = (herp * 5);
+				var helpElement = document.getElementById('help');
+				var flerp = element.innerHTML;	
+			}
+			setInterval("runAway(document.getElementById('square1'))", 111);
+			setInterval("runAway(document.getElementById('square2'))", 545);	
+			setInterval("runAway(document.getElementById('square3'))", 477);	
+			setInterval("runAway(document.getElementById('square4'))", 366);
+			setInterval("runAway(document.getElementById('square5'))", 623);
+			setInterval("runAway(document.getElementById('square6'))", 144);
+			setInterval("runAway(document.getElementById('square7'))", 545);	
+			setInterval("runAway(document.getElementById('square8'))", 425);	
+			setInterval("runAway(document.getElementById('square9'))", 375);
+			setInterval("runAway(document.getElementById('square10'))", 350);
+			setInterval("runAway(document.getElementById('square11'))", 191);
+			setInterval("runAway(document.getElementById('square12'))", 543);	
+			setInterval("runAway(document.getElementById('square13'))", 477);	
+			setInterval("runAway(document.getElementById('square14'))", 396);
+			setInterval("runAway(document.getElementById('square15'))", 63);
+			setInterval("runAway(document.getElementById('square16'))", 144);
+			setInterval("runAway(document.getElementById('square17'))", 591);	
+			setInterval("runAway(document.getElementById('square18'))", 422);	
+			setInterval("runAway(document.getElementById('square19'))", 955);
+			setInterval("runAway(document.getElementById('square20'))", 370);		
+		</script>
+
+
+	</head>
+
+	<body style="text-align: center; color: #fff; background: green; padding: 0; margin: 0;" >
+		
+		<div style="text-align: left; width: 100%; height: 95%;">
+		<div id="square1" style="position: absolute; color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square2" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square3" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square4" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square5" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square6" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square7" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square8" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square9" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square11" style="position: absolute; color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square12" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square13" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square14" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square15" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square16" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square17" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square18" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square19" style="position: absolute;color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square20" style="color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		<div id="square10" style="color: green; height: 20px; width: 20px; background: orange;" onmouseover="runAway(this)">
+			<img src="GoldenPiggy.jpg" style="width: 20px; height: 20px;" />
+		</div>
+		</div>
+	</body>
+	
+</html>
