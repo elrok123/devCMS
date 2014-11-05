@@ -1,7 +1,9 @@
 devCMS
 ======
 
-This app is a simple content management system intended for developers, it allows pure HTML to used when creating content, and also allows direct CSS manipulation, cutting any corners it can, minimising troubles cause by overcluttered Content Management dashboards/panels. </br></br></br>
+<img src="http://cdn.cutestpaw.com/wp-content/uploads/2012/09/l-Oh-hai-mom.jpg" alt="Hey there!" title="Hey there!" />
+
+This app is a simple content management system intended for developers, it allows pure HTML to used when creating content, and also allows direct CSS manipulation, cutting any corners it can, minimising troubles cause by overcluttered Content Management dashboards/panels.
 
 
 I first started developing this app when I was 19 doing work for a small hosting company. The app was an alternative to using third party CMS's like Joomla, which the company was using before, and it would annoy me how the system would filter my content, after all I was a developer and knew how to write what I wanted to write, so I didn't need the system to filter it for me.
