@@ -69,7 +69,7 @@
 					$statement->execute();
 					$complete = 0;
 					$usernameValidated = 0;
-					$passSubmitHashed = crypt($password, "\$iLikePotatoes\$");
+					$passSubmitHashed = crypt($password, "\$******************\$");
 					
 					while($person = $statement->fetch())
 					{
