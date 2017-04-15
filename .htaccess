@@ -2,8 +2,8 @@
 # Rename this file to .htaccess in order to work
 # If you are receiving "Internal Server Error" message - make sure mod_rewrite is enabled in apache
 
-Options -Indexes
-Options +FollowSymLinks
+#Options -Indexes
+#Options +FollowSymLinks
 
 <Files robots.txt>
 	Order Deny,Allow
